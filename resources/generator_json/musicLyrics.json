@@ -1,0 +1,54 @@
+[
+    {
+        "name": "id",
+        "dbType": "bigIncrements",
+        "searchable": false,
+        "inIndex": false,
+        "inForm": false
+    },
+    {
+        "name": "music_fk",
+        "dbType": "bigInteger:unsigned:foreign,music_records,id|nullable",
+        "htmlType": "selectTable:music_records:name,id",
+        "relation": "mt1,MusicRecord,music_fk,id",
+        "validations": "required|string",
+        "searchable": true
+    },
+    {
+        "name": "language_fk",
+        "dbType": "bigInteger:unsigned:foreign,languages,id|nullable",
+        "htmlType": "selectTable:languages:name,id",
+        "relation": "mt1,Language,language_fk,id",
+        "validations": "required|string",
+        "searchable": true
+    },
+    {
+        "name": "lyrics",
+        "dbType": "text",
+        "htmlType": "textarea",
+        "validations": "required|string",
+        "searchable": true
+    },
+    {
+        "name": "uuid",
+        "dbType": "string",
+        "htmlType": "text",
+        "searchable": false,
+        "inIndex": false,
+        "inForm": false
+    },
+    {
+        "name": "created_at",
+        "dbType": "datetime",
+        "searchable": false,
+        "inIndex": false,
+        "inForm": false
+    },
+    {
+        "name": "updated_at",
+        "dbType": "datetime",
+        "searchable": false,
+        "inIndex": false,
+        "inForm": false
+    }
+]

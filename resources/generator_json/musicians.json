@@ -1,0 +1,53 @@
+[
+    {
+        "name": "id",
+        "dbType": "bigIncrements",
+        "searchable": false,
+        "inIndex": false,
+        "inForm": false
+    },
+    {
+        "name": "name",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required|string",
+        "searchable": true
+    },
+    {
+        "name": "band_fk",
+        "dbType": "bigInteger:unsigned:foreign,music_bands,id|nullable",
+        "htmlType": "selectTable:music_bands:name,id",
+        "relation": "mt1,MusicBand,band_fk,id",
+        "validations": "required|string",
+        "searchable": true
+    },
+    {
+        "name": "order",
+        "dbType": "tinyInteger:default,0",
+        "htmlType": "number",
+        "validations": "nullable|integer",
+        "searchable": true
+    },
+    {
+        "name": "uuid",
+        "dbType": "string",
+        "htmlType": "text",
+        "searchable": false,
+        "inIndex": false,
+        "inForm": false
+    },
+    {
+        "name": "created_at",
+        "dbType": "datetime",
+        "searchable": false,
+        "inIndex": false,
+        "inForm": false
+    },
+    {
+        "name": "updated_at",
+        "dbType": "datetime",
+        "searchable": false,
+        "inIndex": false,
+        "inForm": false
+    }
+]

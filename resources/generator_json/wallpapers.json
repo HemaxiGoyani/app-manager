@@ -1,0 +1,46 @@
+[
+    {
+        "name": "id",
+        "dbType": "bigIncrements",
+        "searchable": false,
+        "inIndex": false,
+        "inForm": false
+    },
+    {
+        "name": "name",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required|string",
+        "searchable": true
+    },
+    {
+        "name": "category_fk",
+        "dbType": "bigInteger:unsigned:foreign,wallpaper_categories,id|nullable",
+        "htmlType": "selectTable:wallpaper_categories:name,id",
+        "relation": "mt1,WallpaperCategory,category_fk,id",
+        "validations": "required|string",
+        "searchable": true
+    },
+    {
+        "name": "uuid",
+        "dbType": "string",
+        "htmlType": "text",
+        "searchable": false,
+        "inIndex": false,
+        "inForm": false
+    },
+    {
+        "name": "created_at",
+        "dbType": "datetime",
+        "searchable": false,
+        "inIndex": false,
+        "inForm": false
+    },
+    {
+        "name": "updated_at",
+        "dbType": "datetime",
+        "searchable": false,
+        "inIndex": false,
+        "inForm": false
+    }
+]
